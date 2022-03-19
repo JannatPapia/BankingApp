@@ -12,6 +12,7 @@
 		5C7E42FD27E5F7D7003098AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C7E42FC27E5F7D7003098AC /* Assets.xcassets */; };
 		5C7E430027E5F7D7003098AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C7E42FF27E5F7D7003098AC /* Preview Assets.xcassets */; };
 		5C7E430827E60846003098AC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7E430727E60846003098AC /* CardView.swift */; };
+		5C7E430A27E641C6003098AC /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7E430927E641C6003098AC /* TransactionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		5C7E42FC27E5F7D7003098AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C7E42FF27E5F7D7003098AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5C7E430727E60846003098AC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		5C7E430927E641C6003098AC /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				5C7E42FA27E5F7D5003098AC /* ContentView.swift */,
 				5C7E430727E60846003098AC /* CardView.swift */,
+				5C7E430927E641C6003098AC /* TransactionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C7E42FB27E5F7D5003098AC /* ContentView.swift in Sources */,
+				5C7E430A27E641C6003098AC /* TransactionView.swift in Sources */,
 				5C7E430827E60846003098AC /* CardView.swift in Sources */,
 				5C7E42F927E5F7D5003098AC /* BankingAppApp.swift in Sources */,
 			);

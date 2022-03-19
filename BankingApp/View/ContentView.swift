@@ -9,7 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        NavigationView{
+            ZStack {
+                Color.white.edgesIgnoringSafeArea(.all)
         ScrollView(.vertical) {
+//            HStack{
+//                Text("My Card")
+//                    .font(.title)
+//                    .fontWeight(.bold)
+//                Spacer()
+//            }
+//            .padding()
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack {
                     ForEach(0..<10, id: \.self) { item in
@@ -20,7 +30,10 @@ struct ContentView: View {
                 .padding(20)
             }
         }
-        .background(Color.white)
+  //      .background(Color.white)
+        .navigationTitle("My Card")
+    }
+        }
     }
 }
 
