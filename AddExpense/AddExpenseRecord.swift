@@ -12,33 +12,37 @@ struct RecordView: View {
     @State private var name: String = ""
     @State private var place: String = "Write down somthing here ... "
     @Environment(\.dismiss) var dismiss
+ //   @Binding var dismiss: Bool
     
-        init() {
+    init() {
         UITextView.appearance().backgroundColor = .clear
     }
     var body: some View {
         VStack {
             VStack{
                 HStack{
-               //     Button(action: {}, label: { (dont need button)
-//                        Image(systemName: "xmark")
-//                            .frame(width: 35, height: 50, alignment: .leading)
-//                            .foregroundColor(.black)
+                    //     Button(action: {}, label: { (dont need button)
+                    //                        Image(systemName: "xmark")
+                    //                            .frame(width: 35, height: 50, alignment: .leading)
+                    //                            .foregroundColor(.black)
                     
                     Button {
-                                            dismiss()
-                                        } label: {
-                                            Image(systemName: "xmark")
-                                                .frame(width: 35, height: 50, alignment: .leading)
-                                                .foregroundColor(.black)
-                                      //      Label("Cancel", systemImage: "xmark")
-                                                .labelStyle(.iconOnly)
-                                        }
+                       dismiss()
+                        
+                    } label: {
+                        Image(systemName: "xmark")
+                            .frame(width: 35, height: 50, alignment: .leading)
+                            .foregroundColor(.black)
+
+                        //      Label("Cancel", systemImage: "xmark")
+                            .labelStyle(.iconOnly)
+                    }
                     
                     
                         Text("Add fasting phase")
                             .bold()
                             .padding(.leading, 50)
+                            .foregroundColor(Color.black)
      //               })
                     Spacer()
                 }.padding(.horizontal)
@@ -49,17 +53,21 @@ struct RecordView: View {
                     Divider()
                     HStack {
                         Text("Started")
+                            .foregroundColor(Color.black)
                         Spacer()
                         Text("2/10, 09:00 p.m ")
                             .fontWeight(.ultraLight)
+                            .foregroundColor(Color.black)
                         Image(systemName: "paintbrush.pointed.fill")
                     }.padding()
                     Divider()
                     HStack {
                         Text("Finished")
+                            .foregroundColor(Color.black)
                         Spacer()
                         Text("2/11, 10:33 a.m ")
-                            .fontWeight(.ultraLight);
+                            .fontWeight(.ultraLight)
+                            .foregroundColor(Color.black)
                         Image(systemName: "paintbrush.pointed.fill")
                     }.padding()
                     Divider()
@@ -67,17 +75,20 @@ struct RecordView: View {
                         Spacer()
                         VStack {
                             HStack{
-                                Text("Total Fasting")
+                                Text("Total Expense This Month")
                                     .padding([.leading,.bottom],15)
+                                    .foregroundColor(Color.black)
                                 Spacer()
                                 Text("13h 33m")
                                     .fontWeight(.ultraLight)
+                                    .foregroundColor(Color.black)
                                     .padding()
                             }
                             HStack {
                                 HStack{
                                     Text("Your fasting window")
                                         .padding([.leading,.bottom],15)
+                                        .foregroundColor(Color.black)
                                 }
                                 Spacer()
                                 Image (systemName: "paintbrush.pointed.fill")
@@ -93,6 +104,7 @@ struct RecordView: View {
                     HStack{
                         Text("How did you feel?")
                             .bold()
+                            .foregroundColor(Color.black)
                         Spacer()
                     }
                 }
@@ -110,6 +122,7 @@ struct RecordView: View {
                     VStack {
                         Text("Comment")
                             .bold()
+                            .foregroundColor(Color.black)
                     }
                     Spacer()
                 }
@@ -166,7 +179,9 @@ struct Emoji: View {
                     .frame(width: 50, height: 50)
                     .cornerRadius(3.0)
                     .padding([.trailing,.leading],10)
+                //    .foregroundColor(Color.black)
                 Text("Bad")
+                    .foregroundColor(Color.black)
             }
         }
     }
