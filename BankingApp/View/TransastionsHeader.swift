@@ -9,15 +9,33 @@ import Foundation
 import SwiftUI
 
 struct TransactionsHeader: View {
+    
+    @State var isPresented = false
+    
     var body: some View {
         HStack {
             Text("Send to money")
                 .font(.headline)
             Spacer()
-            Image(systemName: "plus.circle.fill")
-                .resizable()
-                .foregroundColor(.blue)
-                .frame(width: 30, height: 30)
+            
+            
+            Button(action: {
+                           self.isPresented.toggle()
+                       }, label: {
+                           Image(systemName: "plus.circle.fill")
+                               .resizable()
+                               .foregroundColor(.blue)
+                               .frame(width: 30, height: 30)
+                               .sheet(isPresented: $isPresented, content: {
+                                   RecordView()
+                               })
+                       })
+            
+            
+//            Image(systemName: "plus.circle.fill")
+//                .resizable()
+//                .foregroundColor(.blue)
+//                .frame(width: 30, height: 30)
             Text("Add recipient")
                 .font(.headline)
         }
