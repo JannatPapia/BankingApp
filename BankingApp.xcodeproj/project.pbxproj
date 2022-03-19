@@ -17,6 +17,7 @@
 		5C7E430E27E64C8F003098AC /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7E430D27E64C8F003098AC /* TransactionRow.swift */; };
 		5C7E431027E6515E003098AC /* TransastionsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7E430F27E6515E003098AC /* TransastionsHeader.swift */; };
 		5C7E431227E6537F003098AC /* CardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7E431127E6537F003098AC /* CardScreen.swift */; };
+		5C7E431527E65E8F003098AC /* AddExpenseRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7E431427E65E8F003098AC /* AddExpenseRecord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		5C7E430D27E64C8F003098AC /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
 		5C7E430F27E6515E003098AC /* TransastionsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransastionsHeader.swift; sourceTree = "<group>"; };
 		5C7E431127E6537F003098AC /* CardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardScreen.swift; sourceTree = "<group>"; };
+		5C7E431427E65E8F003098AC /* AddExpenseRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseRecord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 		5C7E42EC27E5F7D5003098AC = {
 			isa = PBXGroup;
 			children = (
+				5C7E431327E65E22003098AC /* AddExpense */,
 				5C7E42F727E5F7D5003098AC /* BankingApp */,
 				5C7E42F627E5F7D5003098AC /* Products */,
 			);
@@ -91,6 +94,14 @@
 				5C7E431127E6537F003098AC /* CardScreen.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5C7E431327E65E22003098AC /* AddExpense */ = {
+			isa = PBXGroup;
+			children = (
+				5C7E431427E65E8F003098AC /* AddExpenseRecord.swift */,
+			);
+			path = AddExpense;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +177,7 @@
 				5C7E42FB27E5F7D5003098AC /* ContentView.swift in Sources */,
 				5C7E430A27E641C6003098AC /* TransactionView.swift in Sources */,
 				5C7E430C27E64BA6003098AC /* CardList.swift in Sources */,
+				5C7E431527E65E8F003098AC /* AddExpenseRecord.swift in Sources */,
 				5C7E430E27E64C8F003098AC /* TransactionRow.swift in Sources */,
 				5C7E431027E6515E003098AC /* TransastionsHeader.swift in Sources */,
 				5C7E431227E6537F003098AC /* CardScreen.swift in Sources */,
