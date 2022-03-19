@@ -10,18 +10,21 @@ import SwiftUI
 
 struct CardView: View {
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             HStack{
                 Spacer()
                 Image("visa") // logo
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 35, height: 20)
-                    .padding(3)
-                    .background(Color.pink)
-                    .cornerRadius(5)
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 35, height: 15)
+                    .foregroundColor(.white)
+                    .padding()
+   //                 .padding(3)
+   //                 .background(Color.white)
+//                   .cornerRadius(5)
 
             }
+            Spacer()
             Text("Balance")
                 .font(.caption)
                 HStack{
@@ -33,7 +36,7 @@ struct CardView: View {
                 .padding(.bottom)
             Text("**** **** **** 3022")
                 .font(.caption)
-                .padding(.vertical)
+   //             .padding(.vertical)
 //                Spacer()
         }
         .frame(width: 150, height: 150)
