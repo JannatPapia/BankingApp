@@ -9,7 +9,11 @@ import Foundation
 import SwiftUI
 
 struct CardView: View {
+    
+    @State var isSelected: Bool = false
+
     var body: some View {
+
         VStack(alignment: .leading) {
             HStack{
                 Spacer()
@@ -17,7 +21,7 @@ struct CardView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 35, height: 15)
-                    .foregroundColor(.white)
+                    .foregroundColor(isSelected ? .white: .black)
                     .padding()
    //                 .padding(3)
    //                 .background(Color.white)
@@ -26,22 +30,26 @@ struct CardView: View {
             }
             Spacer()
             Text("Balance")
+                .foregroundColor(isSelected ? .white: .black)
                 .font(.caption)
-                HStack{
+            HStack(alignment: .center){
                     Text("USD")
+                        .foregroundColor(isSelected ? .white: .black)
                         .font(.caption)
                     Text("$17,370.52")
-                        .font(.headline)
+                        .foregroundColor(isSelected ? .white: .black)
+                        .font(Font.headline.bold())
                 }
                 .padding(.bottom)
             Text("**** **** **** 3022")
+                .foregroundColor(isSelected ? .white: .black)
                 .font(.caption)
    //             .padding(.vertical)
 //                Spacer()
         }
         .frame(width: 150, height: 150)
         .padding(8)
-        .background(Color.blue.opacity(0.6))
+        .background(Color(isSelected ? .blue : .white))
         .cornerRadius(20)
     }
 }
@@ -50,8 +58,10 @@ struct CardView: View {
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-        CardView()
+        CardView(isSelected: true)
                 .previewLayout(.sizeThatFits)
+            CardView()
+                    .previewLayout(.sizeThatFits)
         }
     }
 }
