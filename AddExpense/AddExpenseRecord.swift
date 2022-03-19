@@ -11,6 +11,7 @@ import SwiftUI
 struct RecordView: View {
     @State private var name: String = ""
     @State private var place: String = "Write down somthing here ... "
+    @Environment(\.dismiss) var dismiss
     
         init() {
         UITextView.appearance().backgroundColor = .clear
@@ -20,9 +21,21 @@ struct RecordView: View {
             VStack{
                 HStack{
                //     Button(action: {}, label: { (dont need button)
-                        Image(systemName: "xmark")
-                            .frame(width: 35, height: 50, alignment: .leading)
-                            .foregroundColor(.black)
+//                        Image(systemName: "xmark")
+//                            .frame(width: 35, height: 50, alignment: .leading)
+//                            .foregroundColor(.black)
+                    
+                    Button {
+                                            dismiss()
+                                        } label: {
+                                            Image(systemName: "xmark")
+                                                .frame(width: 35, height: 50, alignment: .leading)
+                                                .foregroundColor(.black)
+                                      //      Label("Cancel", systemImage: "xmark")
+                                                .labelStyle(.iconOnly)
+                                        }
+                    
+                    
                         Text("Add fasting phase")
                             .bold()
                             .padding(.leading, 50)
