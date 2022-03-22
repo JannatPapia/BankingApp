@@ -27,7 +27,8 @@ struct TransactionsHeader: View {
                                .foregroundColor(.blue)
                                .frame(width: 30, height: 30)
                                .sheet(isPresented: $isPresented, content: {
-                                   RecordView()
+                                   //RecordView(dismiss: <#Binding<Bool>#>)
+                                   EmptyView()
                                })
                        })
             

@@ -11,12 +11,18 @@ import SwiftUI
 struct RecordView: View {
     @State private var name: String = ""
     @State private var place: String = "Write down somthing here ... "
-    @Environment(\.dismiss) var dismiss
- //   @Binding var dismiss: Bool
+ //   @Environment(\.dismiss) var dismiss
+    @Binding var dismiss: Bool
     
-    init() {
-        UITextView.appearance().backgroundColor = .clear
-    }
+    init(dismiss: Binding<Bool>) {
+            self._dismiss = dismiss
+            UITextView.appearance().backgroundColor = .clear
+        }
+
+    
+//    init() {
+//        UITextView.appearance().backgroundColor = .clear
+//    }
     var body: some View {
         VStack {
             VStack{
@@ -26,17 +32,27 @@ struct RecordView: View {
                     //                            .frame(width: 35, height: 50, alignment: .leading)
                     //                            .foregroundColor(.black)
                     
-                    Button {
-                       dismiss()
-                        
-                    } label: {
-                        Image(systemName: "xmark")
-                            .frame(width: 35, height: 50, alignment: .leading)
-                            .foregroundColor(.black)
-
-                        //      Label("Cancel", systemImage: "xmark")
-                            .labelStyle(.iconOnly)
-                    }
+//                    Button {
+//                       dismiss()
+//
+//                    } label: {
+//                        Image(systemName: "xmark")
+//                            .frame(width: 35, height: 50, alignment: .leading)
+//                            .foregroundColor(.black)
+//
+//                        //      Label("Cancel", systemImage: "xmark")
+//                            .labelStyle(.iconOnly)
+//                    }
+                    
+                    Button(action : {
+                        self.dismiss
+                               //         dismiss.toggle()
+                                    }){
+                                        Image(systemName: "xmark")
+                                            .frame(width: 35, height: 50, alignment: .leading)
+                                            .foregroundColor(Color.black)
+                                           
+                                    }
                     
                     
                         Text("Add fasting phase")
@@ -165,7 +181,7 @@ struct RecordView: View {
 }
 struct RecordView_Previews: PreviewProvider {
     static var previews: some View {
-        RecordView()
+        RecordView(dismiss: .constant(true))
     }
 }
 
